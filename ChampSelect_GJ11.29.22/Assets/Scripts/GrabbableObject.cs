@@ -17,17 +17,28 @@ public class GrabbableObject : MonoBehaviour
     }
 
     private void Update() {
+        
+
         transform.Rotate(0, 0, rotationSpeed * rotationDirection);
 
         if(holdingPoint != null) {
             float step = Time.deltaTime * speed;
-            transform.position = Vector2.MoveTowards(transform.position, holdingPoint.position, step);
+            transform.position = Vector3.MoveTowards(transform.position, holdingPoint.position, step);
         }
     }
 
     public void GrabThisObject(Transform holdPoint, TractorBeam tb) {
         holdingPoint = holdPoint;
         tractorBeam = tb;
+        //transform.SetParent(tractorBeam.transform);
+    }
+
+    public void ReleaseObject() {
+        if (tractorBeam != null) {
+            tractorBeam.holdingObjectDestroyed();
+        }
+        tractorBeam = null;
+        holdingPoint = null;
     }
 
     public void ExplodeObject() {
@@ -38,16 +49,32 @@ public class GrabbableObject : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
+    //private void OnTriggerEnter2D(Collider2D collision) {
+    //    print(collision.gameObject.name);
+    //    GrabbableObject go = collision.gameObject.GetComponent<GrabbableObject>();
+    //    PlayerShipObject player = collision.gameObject.GetComponent<PlayerShipObject>();
+    //    if (go != null) {
+    //        go.ExplodeObject();
+    //        ExplodeObject();
+    //    } else if (player != null) {
+    //        player.TakeDamage();
+    //        ExplodeObject();
+    //    }
+    //}
+
+    private void OnCollisionEnter2D(Collision2D collision) {
         print(collision.gameObject.name);
         GrabbableObject go = collision.gameObject.GetComponent<GrabbableObject>();
-        PlayerShipObject player = collision.gameObject.GetComponent<PlayerShipObject>();
+        PlayerShipObject player = collision.gameObject.GetComponentInChildren<PlayerShipObject>();
+        Grid grid = collision.gameObject.GetComponentInParent<Grid>();
         if (go != null) {
             go.ExplodeObject();
             ExplodeObject();
         } else if (player != null) {
             player.TakeDamage();
             ExplodeObject();
+        } else if (grid != null) {
+            ReleaseObject();
         }
     }
 }
