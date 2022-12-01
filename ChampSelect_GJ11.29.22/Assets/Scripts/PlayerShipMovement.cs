@@ -24,6 +24,8 @@ public class PlayerShipMovement : MonoBehaviour
             Rotate(rotationSpeed);
         } else if (Input.GetKey(KeyCode.P) || Input.GetMouseButton(1)) {
             Rotate(-rotationSpeed);
+        } else {
+            rb.freezeRotation = true;
         }
 
         ClampVelocity();
@@ -48,7 +50,8 @@ public class PlayerShipMovement : MonoBehaviour
         rb.AddForce(force);
     }
 
-    private void Rotate(float amount) {
+    private void Rotate(float amount) { 
+        rb.freezeRotation = false;
         t.Rotate(0, 0, amount);
     }
 }
