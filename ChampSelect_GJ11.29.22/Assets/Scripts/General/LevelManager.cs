@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public PlayerMovement player;
+    public PlayerShipMovement player;
     public AudioManager audioManager;
     public CircleTransition circleTransition;
     public ProgressManager progressManager;
@@ -30,28 +30,28 @@ public class LevelManager : MonoBehaviour
     }
 
     public async void NextLevel() {
-        circleTransition.CloseBlackScreen();
-        progressManager.leftCutscene = true;
-        await Task.Delay(1000);
-        switch (progressManager.currentLevel) {
-            case 0:
-                SceneManager.LoadScene(2);
-                break;
-            case 1:
-                SceneManager.LoadScene(3);
-                break;
-            case 2:
-                progressManager.endofShow = true;
-                SceneManager.LoadScene(4);
-                break;
-            case 4:
-                if (progressManager.endofShow) {
-                    progressManager.gameCompleted = true;
-                    SceneManager.LoadScene(0);
-                } else {
-                    SceneManager.LoadScene(1);
-                }
-                break;
-        }
+        //circleTransition.CloseBlackScreen();
+        //progressManager.leftCutscene = true;
+        //await Task.Delay(1000);
+        //switch (progressManager.currentLevel) {
+        //    case 0:
+        //        SceneManager.LoadScene(2);
+        //        break;
+        //    case 1:
+        //        SceneManager.LoadScene(3);
+        //        break;
+        //    case 2:
+        //        progressManager.endofShow = true;
+        //        SceneManager.LoadScene(4);
+        //        break;
+        //    case 4:
+        //        if (progressManager.endofShow) {
+        //            progressManager.gameCompleted = true;
+        //            SceneManager.LoadScene(0);
+        //        } else {
+        //            SceneManager.LoadScene(1);
+        //        }
+        //        break;
+        //}
     }
 }

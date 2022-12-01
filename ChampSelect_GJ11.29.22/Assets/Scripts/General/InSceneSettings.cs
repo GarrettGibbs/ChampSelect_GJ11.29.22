@@ -24,18 +24,18 @@ public class InSceneSettings : MonoBehaviour
     }
 
     public void ToggleSettingsPanel() {
-        levelManager.audioManager.PlaySound("Click");
+        //levelManager.audioManager.PlaySound("Click");
         //if (levelManager.respawning || levelManager.dialogueManager.inConversation || levelManager.gameEnd) return;
         if (!SettingsOpen) {
             levelManager.inSettings = true;
             SettingsOpen = true;
             settingPanel.SetActive(true);
-            //Time.timeScale = 0;
+            Time.timeScale = 0;
         } else {
             levelManager.inSettings = false;
             SettingsOpen = false;
             settingPanel.SetActive(false);
-            //Time.timeScale = 1f;
+            Time.timeScale = 1f;
         }
     }
 
@@ -49,7 +49,7 @@ public class InSceneSettings : MonoBehaviour
     }
 
     public async void RestartScene() {
-        levelManager.audioManager.PlaySound("Click");
+        //levelManager.audioManager.PlaySound("Click");
         if (levelManager.respawning || levelManager.gameEnd) return;
         levelManager.respawning = true;
         Time.timeScale = 1f;
@@ -60,7 +60,7 @@ public class InSceneSettings : MonoBehaviour
     }
 
     public async void ReturnToMenu() {
-        levelManager.audioManager.PlaySound("Click");
+        //levelManager.audioManager.PlaySound("Click");
         if (levelManager.respawning || levelManager.gameEnd) return;
         levelManager.respawning = true;
         Time.timeScale = 1f;
