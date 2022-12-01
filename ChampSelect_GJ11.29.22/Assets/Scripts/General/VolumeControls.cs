@@ -18,7 +18,7 @@ public class VolumeControls : MonoBehaviour {
     [SerializeField] Slider _sfxSlider;
     [SerializeField] Toggle _sfxToggle;
     [SerializeField] float _multiplier = 30f;
-    [SerializeField] float _defaultVolume = .8f;
+    //[SerializeField] float _defaultVolume = .8f;
     private bool _disableToggleEvent;
 
     private void Awake() {
