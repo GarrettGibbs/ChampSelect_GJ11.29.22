@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GrabbableObject : MonoBehaviour
 {
+    [SerializeField] EnemyAI enemyAI;
     private Transform holdingPoint = null;
     private TractorBeam tractorBeam = null;
     float speed = 13.0f;
@@ -17,9 +18,9 @@ public class GrabbableObject : MonoBehaviour
     }
 
     private void Update() {
-        
-
-        transform.Rotate(0, 0, rotationSpeed * rotationDirection);
+        if(enemyAI == null) { 
+            transform.Rotate(0, 0, rotationSpeed * rotationDirection);
+        }
 
         if(holdingPoint != null) {
             float step = Time.deltaTime * speed;
@@ -30,7 +31,9 @@ public class GrabbableObject : MonoBehaviour
     public void GrabThisObject(Transform holdPoint, TractorBeam tb) {
         holdingPoint = holdPoint;
         tractorBeam = tb;
-        //transform.SetParent(tractorBeam.transform);
+        if(enemyAI != null) {
+            enemyAI.GrabbedByTractorBeam();
+        }
     }
 
     public void ReleaseObject() {
@@ -45,8 +48,11 @@ public class GrabbableObject : MonoBehaviour
         if(tractorBeam != null) {
             tractorBeam.holdingObjectDestroyed();
         }
-        
-        Destroy(gameObject);
+        if(enemyAI != null) {
+            enemyAI.DestroyEnemy();
+        } else {
+            Destroy(gameObject);
+        }
     }
 
     //private void OnTriggerEnter2D(Collider2D collision) {
@@ -63,18 +69,22 @@ public class GrabbableObject : MonoBehaviour
     //}
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        print(collision.gameObject.name);
-        GrabbableObject go = collision.gameObject.GetComponent<GrabbableObject>();
-        PlayerShipObject player = collision.gameObject.GetComponentInChildren<PlayerShipObject>();
-        Grid grid = collision.gameObject.GetComponentInParent<Grid>();
-        if (go != null) {
-            go.ExplodeObject();
-            ExplodeObject();
-        } else if (player != null) {
-            player.TakeDamage();
-            ExplodeObject();
-        } else if (grid != null) {
-            ReleaseObject();
+        if (holdingPoint == null) {
+            PlayerShipObject player = collision.gameObject.GetComponentInChildren<PlayerShipObject>();
+            if (player != null) {
+                player.TakeDamage();
+                ExplodeObject();
+            }
+        } else {
+            GrabbableObject go = collision.gameObject.GetComponent<GrabbableObject>();
+            Grid grid = collision.gameObject.GetComponentInParent<Grid>();
+
+            if (go != null) {
+                go.ExplodeObject();
+                ExplodeObject();
+            } else if (grid != null) {
+                ExplodeObject();
+            }
         }
     }
 }
