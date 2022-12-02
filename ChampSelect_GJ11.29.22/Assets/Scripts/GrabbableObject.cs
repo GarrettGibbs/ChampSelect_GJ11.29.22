@@ -5,6 +5,7 @@ using UnityEngine;
 public class GrabbableObject : MonoBehaviour
 {
     [SerializeField] EnemyAI enemyAI;
+    [SerializeField] Animator animator;
     private Transform holdingPoint = null;
     private TractorBeam tractorBeam = null;
     float speed = 13.0f;
@@ -12,13 +13,22 @@ public class GrabbableObject : MonoBehaviour
 
     int rotationDirection;
 
+    bool hit = false;
+
     private void Start() {
         int[] directions = new int[] {1, -1};
         rotationDirection = directions[Random.Range(0, directions.Length)];
     }
 
     private void Update() {
-        if(enemyAI == null) { 
+        if (hit) {
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Meteor_Explosion") && (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animator.IsInTransition(0))) {
+                Destroy(gameObject);
+            }
+            return;
+        }
+
+        if (enemyAI == null) { 
             transform.Rotate(0, 0, rotationSpeed * rotationDirection);
         }
 
@@ -51,7 +61,8 @@ public class GrabbableObject : MonoBehaviour
         if(enemyAI != null) {
             enemyAI.DestroyEnemy();
         } else {
-            Destroy(gameObject);
+            hit = true;
+            animator.SetTrigger("Hit");
         }
     }
 
