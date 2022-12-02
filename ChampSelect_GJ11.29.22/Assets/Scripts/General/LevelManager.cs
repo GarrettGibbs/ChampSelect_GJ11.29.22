@@ -25,7 +25,9 @@ public class LevelManager : MonoBehaviour
         //circleTransition.player = player.transform;
     }
 
-    public void RestartLevel() {
+    public async void RestartLevel() {
+        respawning = true;
+        await Task.Delay(1000);
         inSceneSettings.RestartScene();
     }
 
