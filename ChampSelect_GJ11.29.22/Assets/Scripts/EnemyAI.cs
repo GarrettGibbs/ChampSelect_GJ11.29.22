@@ -1,3 +1,4 @@
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float rotationSpeed = 20f;
     [SerializeField] float rotationModifier = 0f;
 
+    [SerializeField] AIDestinationSetter destinationSetter;
+    
     bool caught = false;
 
     float floatingRotationSpeed = .1f;
@@ -51,7 +54,7 @@ public class EnemyAI : MonoBehaviour
     private void CheckFire() {
         if (levelManager.respawning) return;
         if (timeSinceFire >= fireRate && target != null) {
-            Instantiate(projectile, firePoint.position, firePoint.rotation, transform);
+            Instantiate(projectile, firePoint.position, firePoint.rotation);
             //levelManager.audioManager.PlaySound("FireShot");
             timeSinceFire = 0f;
         } else {
@@ -60,7 +63,12 @@ public class EnemyAI : MonoBehaviour
     }
 
     public void GrabbedByTractorBeam() {
+        destinationSetter.target = null;
         caught = true;
+    }
+
+    public void ReleaseFromTractorBeam() {
+        DestroyEnemy();
     }
 
     public void DestroyEnemy() {

@@ -8,12 +8,14 @@ public class GrabbableObject : MonoBehaviour
     [SerializeField] Animator animator;
     private Transform holdingPoint = null;
     private TractorBeam tractorBeam = null;
-    float speed = 13.0f;
+    float speed = 18.0f;
     float rotationSpeed = .1f;
 
     int rotationDirection;
 
     bool hit = false;
+
+    public bool isBomb;
 
     private void Start() {
         int[] directions = new int[] {1, -1};
@@ -22,7 +24,7 @@ public class GrabbableObject : MonoBehaviour
 
     private void Update() {
         if (hit) {
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Meteor_Explosion") && (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animator.IsInTransition(0))) {
+            if ((animator.GetCurrentAnimatorStateInfo(0).IsName("Meteor_Explosion") || animator.GetCurrentAnimatorStateInfo(0).IsName("Bomb1_Explosion")) && (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animator.IsInTransition(0))) {
                 Destroy(gameObject);
             }
             return;
@@ -47,8 +49,8 @@ public class GrabbableObject : MonoBehaviour
     }
 
     public void ReleaseObject() {
-        if (tractorBeam != null) {
-            tractorBeam.holdingObjectDestroyed();
+        if(enemyAI != null) {
+            enemyAI.ReleaseFromTractorBeam();
         }
         tractorBeam = null;
         holdingPoint = null;
@@ -61,9 +63,17 @@ public class GrabbableObject : MonoBehaviour
         if(enemyAI != null) {
             enemyAI.DestroyEnemy();
         } else {
+            if(isBomb) BombExplosion();
             hit = true;
             animator.SetTrigger("Hit");
         }
+    }
+
+    private void BombExplosion() {
+        float currentScale = transform.localScale.x;
+        LeanTween.value(gameObject, currentScale, currentScale*3, .35f).setOnUpdate((float val) => {
+            transform.localScale = new Vector3(val, val, val);
+        });
     }
 
     //private void OnTriggerEnter2D(Collider2D collision) {
