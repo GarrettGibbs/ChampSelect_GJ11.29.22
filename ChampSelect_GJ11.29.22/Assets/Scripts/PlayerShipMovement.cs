@@ -9,11 +9,18 @@ public class PlayerShipMovement : MonoBehaviour
     [SerializeField] float maxVelocity;
     [SerializeField] float rotationSpeed;
 
-    private void Start() {
-
-    }
+    [SerializeField] TractorBeam tractorBeam;
 
     private void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            tractorBeam.ReleaseObject();
+            if (tractorBeam.gameObject.activeSelf) {
+                tractorBeam.gameObject.SetActive(false);
+            } else {
+                tractorBeam.gameObject.SetActive(true);
+            }
+        }
+
         float yAxis = Input.GetAxis("Vertical");
         float xAxis = Input.GetAxis("Horizontal");
 

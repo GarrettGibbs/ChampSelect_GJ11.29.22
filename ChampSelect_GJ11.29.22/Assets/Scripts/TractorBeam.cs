@@ -16,6 +16,13 @@ public class TractorBeam : MonoBehaviour
         }
     }
 
+    public void ReleaseObject() {
+        if (holding != null) {
+            holding.ReleaseObject();
+            holding = null;
+        }
+    }
+
     public void holdingObjectDestroyed() {
         holding = null;
     }
