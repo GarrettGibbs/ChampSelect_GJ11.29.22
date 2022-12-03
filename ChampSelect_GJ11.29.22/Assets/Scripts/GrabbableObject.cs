@@ -15,7 +15,7 @@ public class GrabbableObject : MonoBehaviour
 
     bool hit = false;
 
-    public bool isBomb;
+    public BombSpawn bombSpawner;
 
     private void Start() {
         int[] directions = new int[] {1, -1};
@@ -63,7 +63,10 @@ public class GrabbableObject : MonoBehaviour
         if(enemyAI != null) {
             enemyAI.DestroyEnemy();
         } else {
-            if(isBomb) BombExplosion();
+            if (bombSpawner != null) {
+                bombSpawner.OnBombDestoryed();
+                BombExplosion();
+            }
             hit = true;
             animator.SetTrigger("Hit");
         }
@@ -71,7 +74,7 @@ public class GrabbableObject : MonoBehaviour
 
     private void BombExplosion() {
         float currentScale = transform.localScale.x;
-        LeanTween.value(gameObject, currentScale, currentScale*3, .35f).setOnUpdate((float val) => {
+        LeanTween.value(gameObject, currentScale, currentScale*2f, .35f).setOnUpdate((float val) => {
             transform.localScale = new Vector3(val, val, val);
         });
     }
