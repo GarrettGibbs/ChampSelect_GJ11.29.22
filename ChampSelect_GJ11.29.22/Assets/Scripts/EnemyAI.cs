@@ -55,7 +55,6 @@ public class EnemyAI : MonoBehaviour
         if (levelManager.respawning) return;
         if (timeSinceFire >= fireRate && target != null) {
             Instantiate(projectile, firePoint.position, firePoint.rotation);
-            AkSoundEngine.PostEvent("Fire_Laser_Enemy", gameObject);
             //levelManager.audioManager.PlaySound("FireShot");
             timeSinceFire = 0f;
         } else {
