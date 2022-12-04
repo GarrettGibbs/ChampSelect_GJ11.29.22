@@ -27,7 +27,6 @@ public class PlayerShipObject : MonoBehaviour
     public async void TakeDamage() {
         health--;
         UpdateHealth();
-        AkSoundEngine.PostEvent("Take_Damage_Player", gameObject);
         if(health < 1) {
             dead = true;
             animator.SetTrigger("Death");
@@ -43,7 +42,6 @@ public class PlayerShipObject : MonoBehaviour
     public void GainHealth() {
         health++;
         UpdateHealth();
-        AkSoundEngine.PostEvent("Heal_Player", gameObject);
     }
 
     private void UpdateHealth() {

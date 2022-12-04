@@ -62,16 +62,13 @@ public class GrabbableObject : MonoBehaviour
         }
         if(enemyAI != null) {
             enemyAI.DestroyEnemy();
-            AkSoundEngine.PostEvent("Ship_Explosion_Enemy", gameObject);
         } else {
             if (bombSpawner != null) {
                 bombSpawner.OnBombDestoryed();
                 BombExplosion();
-                AkSoundEngine.PostEvent("Ship_Explosion_Enemy", gameObject);
             }
             hit = true;
             animator.SetTrigger("Hit");
-            AkSoundEngine.PostEvent("Destroy_Object", gameObject);
         }
     }
 
