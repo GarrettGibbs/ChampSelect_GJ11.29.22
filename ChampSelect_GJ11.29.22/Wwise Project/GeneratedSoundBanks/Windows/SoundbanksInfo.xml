@@ -155,7 +155,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1914831615" Type="User" Language="SFX" Hash="{69648216-7E2D-0970-84B3-A69499682911}">
+		<SoundBank Id="1914831615" Type="User" Language="SFX" Hash="{C84C44B7-F1AB-B6EE-E1E4-C65BE9106A5B}">
 			<ShortName>Sound_FX</ShortName>
 			<Path>Sound_FX.bnk</Path>
 			<Media>
@@ -165,7 +165,7 @@
 				</File>
 				<File Id="601911783" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FX_Spaceship_Player.wav</ShortName>
-					<CachePath>SFX/FX_Spaceship_Player_10C4C929.wem</CachePath>
+					<CachePath>SFX/FX_Spaceship_Player_510DF8AB.wem</CachePath>
 				</File>
 				<File Id="658711239" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FX_Damage2.wav</ShortName>
@@ -218,7 +218,7 @@
 						<MediaRef Id="184251227"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2689741048" Name="Spaceship_Engine_Player" DurationType="OneShot" DurationMin="2.1480045" DurationMax="2.1480045">
+				<Event Id="2689741048" Name="Spaceship_Engine_Player" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="601911783"/>
 					</MediaRefs>
@@ -236,5 +236,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9CB44211-CE02-E2F4-BA88-798AA2B7082E}</FileHash>
+	<FileHash>{8B39496F-94C1-7539-03DF-8EE3E0FFE6A1}</FileHash>
 </SoundBanksInfo>
