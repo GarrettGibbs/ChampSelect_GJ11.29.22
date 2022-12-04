@@ -29,6 +29,18 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    private void Start() {
+        audioManager.TransitionMusic(MusicType.Peaceful);
+    }
+
+    private void Update() {
+        if(activeEnemies.Count == 0) {
+            audioManager.TransitionMusic(MusicType.Peaceful);
+        } else {
+            audioManager.TransitionMusic(MusicType.Battle);
+        }
+    }
+
     public async void RestartLevel() {
         respawning = true;
         await Task.Delay(1000);
