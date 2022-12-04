@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F2348DC9-118D-4C1E-8BAD-CAC9F555F520}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{F2348DC9-118D-4C1E-8BAD-CAC9F555F520}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="FX_Damage1" ID="{8E3029DD-CF80-4835-9FEA-1B6C61BC93EA}" ShortID="271650885">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4930991-E910-4B01-8D1B-3B7CB32FCFB0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{006EBE63-B642-4A79-BC03-14081BD95E59}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="FX_Damage1" ID="{74C7F243-6BA4-4363-8AAD-3C66644A9EBC}">
+							<Language>SFX</Language>
+							<AudioFile>FX_Damage1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="979837872"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="FX_Damage1" ID="{74C7F243-6BA4-4363-8AAD-3C66644A9EBC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="FX_Damage2" ID="{78DA2371-2420-4228-839B-5B0873859322}" ShortID="1028981038">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4930991-E910-4B01-8D1B-3B7CB32FCFB0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{006EBE63-B642-4A79-BC03-14081BD95E59}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="FX_Damage2" ID="{4A6DBF41-8ABD-4D08-8ABE-2AA782765F31}">
+							<Language>SFX</Language>
+							<AudioFile>FX_Damage2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="658711239"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="FX_Damage2" ID="{4A6DBF41-8ABD-4D08-8ABE-2AA782765F31}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="FX_Explosion" ID="{7A552D01-DFBE-45E5-B904-A4E3F7B9F08A}" ShortID="252892334">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4930991-E910-4B01-8D1B-3B7CB32FCFB0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{006EBE63-B642-4A79-BC03-14081BD95E59}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="FX_Explosion" ID="{CE75B127-A5C9-4310-BECB-606CAA7E35D4}">
+							<Language>SFX</Language>
+							<AudioFile>FX_Explosion.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="671854386"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="FX_Explosion" ID="{CE75B127-A5C9-4310-BECB-606CAA7E35D4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="FX_Heal" ID="{F68BF982-E28D-4C44-9B3A-637F8E0E8482}" ShortID="205108760">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4930991-E910-4B01-8D1B-3B7CB32FCFB0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{006EBE63-B642-4A79-BC03-14081BD95E59}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="FX_Heal" ID="{A9A9AF69-3FC5-46C0-802B-143FBDF119FE}">
+							<Language>SFX</Language>
+							<AudioFile>FX_Heal.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="885020929"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="FX_Heal" ID="{A9A9AF69-3FC5-46C0-802B-143FBDF119FE}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="FX_Heal2" ID="{C1FB0C99-1589-4652-82D6-D20530EE385F}" ShortID="55074192">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4930991-E910-4B01-8D1B-3B7CB32FCFB0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{006EBE63-B642-4A79-BC03-14081BD95E59}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="FX_Heal2" ID="{F67DFC64-D217-4871-9E91-75EDB1BD2C14}">
+							<Language>SFX</Language>
+							<AudioFile>FX_Heal2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="132180541"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="FX_Heal2" ID="{F67DFC64-D217-4871-9E91-75EDB1BD2C14}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="FX_LowHealth" ID="{DC6CDC5C-A7FD-4913-8A68-E05EB3EB048F}" ShortID="324936815">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4930991-E910-4B01-8D1B-3B7CB32FCFB0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{006EBE63-B642-4A79-BC03-14081BD95E59}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="FX_LowHealth" ID="{C08ADFE5-817B-4FBB-8526-1569553BB8EA}">
+							<Language>SFX</Language>
+							<AudioFile>FX_LowHealth.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="622998878"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="FX_LowHealth" ID="{C08ADFE5-817B-4FBB-8526-1569553BB8EA}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="FX_TractorBeam1" ID="{18E6BDF8-F5FC-4D1B-AF59-71E303B10E7D}" ShortID="344389030">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4930991-E910-4B01-8D1B-3B7CB32FCFB0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{006EBE63-B642-4A79-BC03-14081BD95E59}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="FX_TractorBeam1" ID="{9EDA1F5A-F91D-4A4D-8303-DD16562E669D}">
+							<Language>SFX</Language>
+							<AudioFile>FX_TractorBeam1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="826275661"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="FX_TractorBeam1" ID="{9EDA1F5A-F91D-4A4D-8303-DD16562E669D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="FX_Laser" ID="{C38458E8-EEA3-41D4-878B-FC621E9F8AC8}" ShortID="517608944">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4930991-E910-4B01-8D1B-3B7CB32FCFB0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{006EBE63-B642-4A79-BC03-14081BD95E59}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="FX_Laser" ID="{86AF3574-91CD-4F2C-8404-F9817B524E3E}">
+							<Language>SFX</Language>
+							<AudioFile>FX_Laser.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="877224628"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="FX_Laser" ID="{86AF3574-91CD-4F2C-8404-F9817B524E3E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="FX_Spaceship_Enemy" ID="{35FA9501-E432-4966-A627-E637CDA39C31}" ShortID="541611305">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4930991-E910-4B01-8D1B-3B7CB32FCFB0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{006EBE63-B642-4A79-BC03-14081BD95E59}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="FX_Spaceship_Enemy" ID="{6C148FF3-EA93-4AB7-A7C1-0FA6E32E1A91}">
+							<Language>SFX</Language>
+							<AudioFile>FX_Spaceship_Enemy.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="184251227"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="FX_Spaceship_Enemy" ID="{6C148FF3-EA93-4AB7-A7C1-0FA6E32E1A91}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="FX_Spaceship_Player" ID="{EED3C37E-6D6E-4C50-B881-9B605C8BB478}" ShortID="85982913">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4930991-E910-4B01-8D1B-3B7CB32FCFB0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{006EBE63-B642-4A79-BC03-14081BD95E59}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="FX_Spaceship_Player" ID="{53B51684-C6C4-426F-855F-09E634111A0E}">
+							<Language>SFX</Language>
+							<AudioFile>FX_Spaceship_Player.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="601911783"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="FX_Spaceship_Player" ID="{53B51684-C6C4-426F-855F-09E634111A0E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
