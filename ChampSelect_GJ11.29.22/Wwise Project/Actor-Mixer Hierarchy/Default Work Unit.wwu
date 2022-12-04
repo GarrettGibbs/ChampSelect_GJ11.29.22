@@ -202,6 +202,9 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="FX_Spaceship_Player" ID="{EED3C37E-6D6E-4C50-B881-9B605C8BB478}" ShortID="85982913">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4930991-E910-4B01-8D1B-3B7CB32FCFB0}"/>
@@ -212,6 +215,11 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="FX_Spaceship_Player" ID="{53B51684-C6C4-426F-855F-09E634111A0E}">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.14364920611226"/>
+								<Property Name="TrimEnd" Type="Real64" Value="2.07393541324576"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>FX_Spaceship_Player.wav</AudioFile>
 							<MediaIDList>
