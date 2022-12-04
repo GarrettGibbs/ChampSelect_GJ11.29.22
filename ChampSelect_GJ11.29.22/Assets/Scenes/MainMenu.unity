@@ -557,6 +557,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894702245}
   m_CullTransparentMesh: 1
+--- !u!114 &913907589 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5666917819401829473, guid: 35808fd36235cdc46aac5a9b0fc59ebd, type: 3}
+  m_PrefabInstance: {fileID: 1810753522}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69efef82ccbb83f49bd24ec579f4463c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1079186030
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,6 +878,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5490769002690503184, guid: d19c57be53176d74c8dccc1298ec0200, type: 3}
+      propertyPath: m_BlockingObjects
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490769002690503185, guid: d19c57be53176d74c8dccc1298ec0200, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 913907589}
     - target: {fileID: 5490769002690503190, guid: d19c57be53176d74c8dccc1298ec0200, type: 3}
       propertyPath: m_Name
       value: TransitionCanvas
@@ -1666,7 +1685,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1637854477}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2135872990}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1637854477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2146,13 +2177,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 59ac85e60d4d64d7abf87ca50be72533, type: 3}
     - target: {fileID: 5666917819401829474, guid: 35808fd36235cdc46aac5a9b0fc59ebd, type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5666917819401829474, guid: 35808fd36235cdc46aac5a9b0fc59ebd, type: 3}
       propertyPath: m_Volume
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5666917819401829474, guid: 35808fd36235cdc46aac5a9b0fc59ebd, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 84027e42a0ecd4c5992ddf16ee60e046, type: 3}
+      objectReference: {fileID: 8300000, guid: 6183dd88a554a44eda38ebb7ef4aad11, type: 3}
     - target: {fileID: 5666917819401829475, guid: 35808fd36235cdc46aac5a9b0fc59ebd, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -2598,6 +2633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  menuCenter: {fileID: 1637854474}
   audioManager: {fileID: 0}
   circleTransition: {fileID: 0}
   progressManager: {fileID: 0}

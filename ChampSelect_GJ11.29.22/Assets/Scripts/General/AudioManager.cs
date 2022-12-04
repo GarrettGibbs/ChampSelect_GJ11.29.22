@@ -39,10 +39,10 @@ public class AudioManager : MonoBehaviour {
         if (music == currentMusic) return;
         //ResetAmbients();
         currentMusic = music;
-        LeanTween.value(gameObject, .15f, 0f, 1f).setOnUpdate((float val) => {
+        LeanTween.value(gameObject, .15f, 0f, .2f).setOnUpdate((float val) => {
             musicSource.volume = val;
         });
-        await Task.Delay(1010);
+        await Task.Delay(205);
         switch (music) {
             case MusicType.Peaceful:
                 PlayPeacefulMusic();
@@ -81,23 +81,23 @@ public class AudioManager : MonoBehaviour {
     //}
 
     private async void PlayBattleMusic() {
-        await Task.Delay(1000);
+        await Task.Delay(200);
         musicSource.clip = combatIntro;
         musicSource.Play();
         musicSource.volume = 1f;
         await Task.Delay(59110);
-        if (currentMusic != MusicType.Battle) return;
+        if (currentMusic != MusicType.Battle || !this.enabled) return;
         musicSource.clip = combatLoop;
         musicSource.Play();
     }
 
     private async void PlayPeacefulMusic() {
-        await Task.Delay(1000);
+        await Task.Delay(200);
         musicSource.clip = peacefulIntro;
         musicSource.Play();
         musicSource.volume = 1f;
         await Task.Delay(59077);
-        if (currentMusic != MusicType.Peaceful) return;
+        if (currentMusic != MusicType.Peaceful || !this.enabled) return;
         musicSource.clip = peacefulLoop;
         musicSource.Play();
     }
@@ -162,4 +162,9 @@ public class AudioManager : MonoBehaviour {
     //            break;
     //    }
     //}
+
+    private void OnDestroy() {
+        musicSource.Stop();
+        StopAllCoroutines();
+    }
 }
