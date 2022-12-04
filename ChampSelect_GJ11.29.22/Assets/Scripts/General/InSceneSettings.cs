@@ -79,4 +79,8 @@ public class InSceneSettings : MonoBehaviour
             PlayerPrefs.SetInt(fullscreenKey, 0);
         }
     }
+
+    public void QuitGame() {
+        Application.Quit();
+    }
 }

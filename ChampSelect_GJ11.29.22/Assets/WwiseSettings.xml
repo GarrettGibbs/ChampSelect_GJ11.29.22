@@ -9,9 +9,7 @@
   <ObjectReferenceAutoCleanup>true</ObjectReferenceAutoCleanup>
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
-  <WwiseInstallationPathMac>/Applications/Audiokinetic/Wwise 2022.1.0.8070/Wwise.app</WwiseInstallationPathMac>
-  <WwiseInstallationPathWindows />
-  <WwiseProjectPath>../../../../../../Users/willwood/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/z:/Volumes/LaCie HD/Unity Stuff/ChampSelect_GJ11.29.22/ChampSelect_GJ11.29.22/Wwise Project/Wwise Project.wproj</WwiseProjectPath>
+  <WwiseProjectPath>../Wwise Project/Wwise Project.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>
   <WaapiIP>127.0.0.1</WaapiIP>

@@ -22,7 +22,9 @@ public class LevelManager : MonoBehaviour
         audioManager = FindObjectOfType<AudioManager>();
         circleTransition = FindObjectOfType<CircleTransition>();
         progressManager = FindObjectOfType<ProgressManager>();
-        circleTransition.player = player.transform;
+        if(player != null) {
+            circleTransition.player = player.transform;
+        }
     }
 
     public async void RestartLevel() {

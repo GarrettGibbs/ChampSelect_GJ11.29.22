@@ -11,6 +11,7 @@ public class Barrier : MonoBehaviour
         if(go != null) {
             if (go.bombSpawner != null) {
                 bombSpawn.barrierDestroyed = true;
+                go.ExplodeObject();
                 Destroy(gameObject);
             } else {
                 go.ExplodeObject();
