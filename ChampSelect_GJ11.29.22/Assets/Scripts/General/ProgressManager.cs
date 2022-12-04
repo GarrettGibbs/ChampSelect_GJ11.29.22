@@ -5,20 +5,27 @@ using UnityEngine;
 public class ProgressManager : MonoBehaviour
 {
     #region OLD
-    public bool[] levelsDone = new bool[5] { false, false, false, false, false };
+    //public bool[] levelsDone = new bool[5] { false, false, false, false, false };
 
-    public bool alreadyBegunLevel = false;
-    public bool hasMetTommy = false;
+    //public bool alreadyBegunLevel = false;
+    //public bool hasMetTommy = false;
 
-    public bool secondConversation = false;
-    public bool thirdConversation = false;
-    public bool fourthConversation = false;
-    public bool fifthConversation = false;
-    public bool sixthConversation = false;
+    //public bool secondConversation = false;
+    //public bool thirdConversation = false;
+    //public bool fourthConversation = false;
+    //public bool fifthConversation = false;
+    //public bool sixthConversation = false;
 
-    public bool pushedTheButton = false;
+    //public bool pushedTheButton = false;
 
-    public bool gotSecretPickup = false;
+    //public bool gotSecretPickup = false;
+
+    //public int ranDialogueIndex = 0;
+    //public int teleportDialogueIndex = 0;
+    //public int apDialogueIndex = 0;
+    //public int redirectDialogueIndex = 0;
+    //public int deathDialogueIndex = 0;
+    //public int penguinDialogueIndex = 0;
     #endregion
 
     public bool firstTimeAtMenu = true;
@@ -27,15 +34,8 @@ public class ProgressManager : MonoBehaviour
     public bool leftCutscene = false;
     public bool gameCompleted = false;
 
-    public int ranDialogueIndex = 0;
-    public int teleportDialogueIndex = 0;
-    public int apDialogueIndex = 0;
-    public int redirectDialogueIndex = 0;
-    public int deathDialogueIndex = 0;
-    public int penguinDialogueIndex = 0;
-
     public static ProgressManager instance;
-    public bool[] levelsStared = new bool[3] {false,false,false};
+    //public bool[] levelsStared = new bool[3] {false,false,false};
     public int currentLevel = -1;
     
 
@@ -48,7 +48,7 @@ public class ProgressManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    public void ResetLevels() {
-        levelsStared = new bool[3] { false, false, false };
-    }
+    //public void ResetLevels() {
+    //    levelsStared = new bool[3] { false, false, false };
+    //}
 }
