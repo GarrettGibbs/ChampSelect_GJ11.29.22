@@ -18,6 +18,8 @@ public class LevelManager : MonoBehaviour
     public bool inSettings = false;
     public bool readyToLeave = false;
 
+    public List<EnemyAI> activeEnemies = new List<EnemyAI>();
+
     private void Awake() {
         audioManager = FindObjectOfType<AudioManager>();
         circleTransition = FindObjectOfType<CircleTransition>();

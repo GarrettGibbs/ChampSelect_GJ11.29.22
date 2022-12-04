@@ -32,6 +32,12 @@ public class EnemyAI : MonoBehaviour
         rotationDirection = directions[Random.Range(0, directions.Length)];
     }
 
+    public void ActivateAgro() {
+        levelManager.activeEnemies.Add(this);
+        destinationSetter.target = levelManager.player.transform;
+        target = levelManager.player.transform;
+    }
+
     private void Update() {
         if (hit) {
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("Enemy1_Explosion") && (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animator.IsInTransition(0))) {
@@ -41,6 +47,7 @@ public class EnemyAI : MonoBehaviour
         }
 
         if (!caught) {
+            if (target == null) return;
             CheckFire();
             Vector3 vectorToTarget = target.position - enemyGFX.position;
             float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg - rotationModifier;
@@ -73,6 +80,9 @@ public class EnemyAI : MonoBehaviour
     }
 
     public void DestroyEnemy() {
+        if (levelManager.activeEnemies.Contains(this)) {
+            levelManager.activeEnemies.Remove(this);
+        }
         animator.SetTrigger("Hit");
         hit = true;
     }
