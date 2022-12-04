@@ -13,6 +13,7 @@ public class TractorBeam : MonoBehaviour
         if (go != null && holding == null) {
             go.GrabThisObject(holdPosition.transform, this);
             holding = go;
+            AkSoundEngine.PostEvent("TractorBeam_Grab", gameObject);
         }
     }
 
