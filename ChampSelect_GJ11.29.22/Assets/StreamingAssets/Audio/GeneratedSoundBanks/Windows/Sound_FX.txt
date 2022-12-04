@@ -1,0 +1,20 @@
+Event	ID	Name			Wwise Object Path	Notes
+	167102348	Fire_Laser_Enemy			\Default Work Unit\Fire_Laser_Enemy	
+	386900386	Ship_Explosion_Enemy			\Default Work Unit\Ship_Explosion_Enemy	
+	1445354741	Heal_Player			\Default Work Unit\Heal_Player	
+	2180772097	Spaceship_Engine_Enemy			\Default Work Unit\Spaceship_Engine_Enemy	
+	2503555200	TractorBeam_Grab			\Default Work Unit\TractorBeam_Grab	
+	2524325405	Destroy_Object			\Default Work Unit\Destroy_Object	
+	2689741048	Spaceship_Engine_Player			\Default Work Unit\Spaceship_Engine_Player	
+	3762463012	Take_Damage_Player			\Default Work Unit\Take_Damage_Player	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	184251227	FX_Spaceship_Enemy	Z:\Volumes\LaCie HD\Unity Stuff\ChampSelect_GJ11.29.22\ChampSelect_GJ11.29.22\Wwise Project\.cache\Windows\SFX\FX_Spaceship_Enemy_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_Spaceship_Enemy		379004
+	601911783	FX_Spaceship_Player	Z:\Volumes\LaCie HD\Unity Stuff\ChampSelect_GJ11.29.22\ChampSelect_GJ11.29.22\Wwise Project\.cache\Windows\SFX\FX_Spaceship_Player_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_Spaceship_Player		379004
+	658711239	FX_Damage2	Z:\Volumes\LaCie HD\Unity Stuff\ChampSelect_GJ11.29.22\ChampSelect_GJ11.29.22\Wwise Project\.cache\Windows\SFX\FX_Damage2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_Damage2		308796
+	671854386	FX_Explosion	Z:\Volumes\LaCie HD\Unity Stuff\ChampSelect_GJ11.29.22\ChampSelect_GJ11.29.22\Wwise Project\.cache\Windows\SFX\FX_Explosion_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_Explosion		279520
+	826275661	FX_TractorBeam1	Z:\Volumes\LaCie HD\Unity Stuff\ChampSelect_GJ11.29.22\ChampSelect_GJ11.29.22\Wwise Project\.cache\Windows\SFX\FX_TractorBeam1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_TractorBeam1		264696
+	877224628	FX_Laser	Z:\Volumes\LaCie HD\Unity Stuff\ChampSelect_GJ11.29.22\ChampSelect_GJ11.29.22\Wwise Project\.cache\Windows\SFX\FX_Laser_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_Laser		163328
+	885020929	FX_Heal	Z:\Volumes\LaCie HD\Unity Stuff\ChampSelect_GJ11.29.22\ChampSelect_GJ11.29.22\Wwise Project\.cache\Windows\SFX\FX_Heal_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_Heal		239292
+	979837872	FX_Damage1	Z:\Volumes\LaCie HD\Unity Stuff\ChampSelect_GJ11.29.22\ChampSelect_GJ11.29.22\Wwise Project\.cache\Windows\SFX\FX_Damage1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_Damage1		352896
+

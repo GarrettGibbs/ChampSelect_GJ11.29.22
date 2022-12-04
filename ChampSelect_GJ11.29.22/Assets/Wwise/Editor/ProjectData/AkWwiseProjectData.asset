@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics/Default Work Unit
     guid: e684b45021a3da4594e2253335e2ee2a
     GuidInternal: 
-    m_lastTime: -8585315151004775808
+    m_lastTime: -8585314466004775808
     List: []
   - PhysicalPath: Virtual Acoustics/Factory Acoustic Textures.wwu
     PathAndIcons:
@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics/Factory Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8585315694394775808
+    m_lastTime: -8585314466004775808
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Default Work Unit
     guid: 63be6e0042b6794abc0314081bd95e59
     GuidInternal: 
-    m_lastTime: -8585315151014775808
+    m_lastTime: -8585314466184775808
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -331,8 +331,22 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: 34909c0667de994ca3c0991a6dd8ae4d
     GuidInternal: 
-    m_lastTime: -8585315151014775808
-    List: []
+    m_lastTime: -8585314384404775808
+    List:
+    - name: Sound_FX
+      guid: b487191d8a65b446ad54964903a342ae
+      id: 1914831615
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 34909c0667de994ca3c0991a6dd8ae4d
+      - ElementName: Sound_FX
+        ObjectType: 7
+        guid: b487191d8a65b446ad54964903a342ae
+      Path: SoundBanks/Default Work Unit/Sound_FX
   EventWwu:
   - PhysicalPath: Events/Default Work Unit.wwu
     PathAndIcons:
@@ -345,8 +359,144 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: d9f5867437745a4f9d0711d20b39e504
     GuidInternal: 
-    m_lastTime: -8585315151014775808
-    List: []
+    m_lastTime: -8585314384404775808
+    List:
+    - name: Destroy_Object
+      guid: a9139ed5fc89d5469c4971d644fc75c5
+      id: 2524325405
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d9f5867437745a4f9d0711d20b39e504
+      - ElementName: Destroy_Object
+        ObjectType: 3
+        guid: a9139ed5fc89d5469c4971d644fc75c5
+      Path: Events/Default Work Unit/Destroy_Object
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Fire_Laser_Enemy
+      guid: c31de5ee7d5ed841a4d9c2dffc47b3f9
+      id: 167102348
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d9f5867437745a4f9d0711d20b39e504
+      - ElementName: Fire_Laser_Enemy
+        ObjectType: 3
+        guid: c31de5ee7d5ed841a4d9c2dffc47b3f9
+      Path: Events/Default Work Unit/Fire_Laser_Enemy
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Heal_Player
+      guid: 49c4a4bcd0ea0749a3d88be6846ed184
+      id: 1445354741
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d9f5867437745a4f9d0711d20b39e504
+      - ElementName: Heal_Player
+        ObjectType: 3
+        guid: 49c4a4bcd0ea0749a3d88be6846ed184
+      Path: Events/Default Work Unit/Heal_Player
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Ship_Explosion_Enemy
+      guid: b9142d5282d89c45a5e38c4e96e7c38f
+      id: 386900386
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d9f5867437745a4f9d0711d20b39e504
+      - ElementName: Ship_Explosion_Enemy
+        ObjectType: 3
+        guid: b9142d5282d89c45a5e38c4e96e7c38f
+      Path: Events/Default Work Unit/Ship_Explosion_Enemy
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Spaceship_Engine_Enemy
+      guid: 1fa06e48910c0140b86bd1d7c40bc112
+      id: 2180772097
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d9f5867437745a4f9d0711d20b39e504
+      - ElementName: Spaceship_Engine_Enemy
+        ObjectType: 3
+        guid: 1fa06e48910c0140b86bd1d7c40bc112
+      Path: Events/Default Work Unit/Spaceship_Engine_Enemy
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Spaceship_Engine_Player
+      guid: 967359d72c54aa4990a140f5f0fff857
+      id: 2689741048
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d9f5867437745a4f9d0711d20b39e504
+      - ElementName: Spaceship_Engine_Player
+        ObjectType: 3
+        guid: 967359d72c54aa4990a140f5f0fff857
+      Path: Events/Default Work Unit/Spaceship_Engine_Player
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Take_Damage_Player
+      guid: b7820e9a5a4e2f44a608b7891b84e361
+      id: 3762463012
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d9f5867437745a4f9d0711d20b39e504
+      - ElementName: Take_Damage_Player
+        ObjectType: 3
+        guid: b7820e9a5a4e2f44a608b7891b84e361
+      Path: Events/Default Work Unit/Take_Damage_Player
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: TractorBeam_Grab
+      guid: 1598910f22e25346b2cb786c00675f03
+      id: 2503555200
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d9f5867437745a4f9d0711d20b39e504
+      - ElementName: TractorBeam_Grab
+        ObjectType: 3
+        guid: 1598910f22e25346b2cb786c00675f03
+      Path: Events/Default Work Unit/TractorBeam_Grab
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     PathAndIcons:
@@ -359,7 +509,7 @@ MonoBehaviour:
     ParentPath: Game Parameters/Default Work Unit
     guid: 60be9ca5e0f91344825a62092a4b753f
     GuidInternal: 
-    m_lastTime: -8585315151014775808
+    m_lastTime: -8585314466184775808
     List: []
   - PhysicalPath: Game Parameters/Factory Igniter Live Game Syncs.wwu
     PathAndIcons:
@@ -372,7 +522,7 @@ MonoBehaviour:
     ParentPath: Game Parameters/Factory Igniter Live Game Syncs
     guid: 7bcb7b9bba729142b50477f748886ea4
     GuidInternal: 
-    m_lastTime: -8585315150944775808
+    m_lastTime: -8585314466184775808
     List:
     - name: IGN_Eng_Exh_Position
       guid: 2da73867a21d1b4cb8e44ca9b217dd40
@@ -455,7 +605,7 @@ MonoBehaviour:
     ParentPath: Game Parameters/Factory Igniter Live Synth Game Syncs
     guid: 006ae4824720f94892d401684c1325f6
     GuidInternal: 
-    m_lastTime: -8585315150944775808
+    m_lastTime: -8585314466184775808
     List:
     - name: IgniterSynth_REV
       guid: ddf67fe3cfcc094aa17a7afc060c69f2
@@ -496,7 +646,7 @@ MonoBehaviour:
     ParentPath: Game Parameters/Factory Soundseed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8585315694124775808
+    m_lastTime: -8585314466184775808
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -650,7 +800,7 @@ MonoBehaviour:
     ParentPath: States/Default Work Unit
     guid: b106e8e25a26454490e1b66eb6e3d339
     GuidInternal: 
-    m_lastTime: -8585315151014775808
+    m_lastTime: -8585314466004775808
     List: []
   SwitchWwu:
   - PhysicalPath: Switches/Default Work Unit.wwu
@@ -664,7 +814,7 @@ MonoBehaviour:
     ParentPath: Switches/Default Work Unit
     guid: b67ed5066ee53a418d5b7bcb605f73e3
     GuidInternal: 
-    m_lastTime: -8585315151014775808
+    m_lastTime: -8585314466004775808
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers/Default Work Unit.wwu
@@ -678,11 +828,11 @@ MonoBehaviour:
     ParentPath: Triggers/Default Work Unit
     guid: 8fc3ed2c16cd114089223ed748e26b0c
     GuidInternal: 
-    m_lastTime: -8585315151014775808
+    m_lastTime: -8585314466004775808
     List: []
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedFileSystemItemIds: 1000000011000000
+  ExpandedWaapiItemIds: 1000000011000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 
