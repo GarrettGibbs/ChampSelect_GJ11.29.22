@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GrabbableObject : MonoBehaviour
 {
-    [SerializeField] LevelManager levelManager;
+    public LevelManager levelManager;
     [SerializeField] EnemyAI enemyAI;
     [SerializeField] Animator animator;
     private Transform holdingPoint = null;
@@ -62,15 +62,15 @@ public class GrabbableObject : MonoBehaviour
             tractorBeam.holdingObjectDestroyed();
         }
         if(enemyAI != null) {
+            levelManager.audioManager.PlaySound("FX_Explosion");
             enemyAI.DestroyEnemy();
             //AkSoundEngine.PostEvent("Ship_Explosion_Enemy", gameObject);
-            levelManager.audioManager.PlaySound("FX_Explosion");
         } else {
             if (bombSpawner != null) {
+                levelManager.audioManager.PlaySound("FX_Explosion");
                 bombSpawner.OnBombDestoryed();
                 BombExplosion();
                 //AkSoundEngine.PostEvent("Ship_Explosion_Enemy", gameObject);
-                levelManager.audioManager.PlaySound("FX_Explosion");
             }
             hit = true;
             animator.SetTrigger("Hit");

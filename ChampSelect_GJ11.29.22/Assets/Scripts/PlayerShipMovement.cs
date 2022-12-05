@@ -13,7 +13,7 @@ public class PlayerShipMovement : MonoBehaviour
     [SerializeField] LevelManager levelManager;
 
     private void Update() {
-        if (levelManager.respawning || levelManager.inSettings) return;
+        if (levelManager.respawning || levelManager.inSettings || levelManager.gameEnd) return;
         if (Input.GetKeyDown(KeyCode.Space)) {
             tractorBeam.ReleaseObject();
             if (tractorBeam.gameObject.activeSelf) {
