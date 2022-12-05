@@ -50,10 +50,10 @@ public class InSceneSettings : MonoBehaviour
 
     public async void RestartScene() {
         //levelManager.audioManager.PlaySound("Click");
-        //if (levelManager.respawning || levelManager.gameEnd) return;
+        if (levelManager.respawning || levelManager.gameEnd) return;
         levelManager.respawning = true;
         Time.timeScale = 1f;
-        //levelManager.circleTransition.CloseBlackScreen();
+        levelManager.circleTransition.CloseBlackScreen();
         levelManager.progressManager.firstTimeAtMenu = false;
         await Task.Delay(1000);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

@@ -48,6 +48,10 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public void PlanetDestroyed() {
+        NextLevel();
+    }
+
     public async void RestartLevel() {
         respawning = true;
         await Task.Delay(1000);
