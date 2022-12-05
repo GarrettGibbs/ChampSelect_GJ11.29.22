@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6437092812428542286}
   - component: {fileID: 6437092812428542290}
   - component: {fileID: 6437092812428542285}
+  - component: {fileID: 6493710510024575318}
   m_Layer: 0
   m_Name: Bomb1
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6437092812428542280}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -121.4, y: 0, z: 0}
-  m_LocalScale: {x: 180, y: 180, z: 180}
+  m_LocalScale: {x: 14.7, y: 14.7, z: 14.7}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8f41b1eb77d521843822656d24d8af7f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1392821d6aff5244c9b81bb00418daf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyAI: {fileID: 0}
   animator: {fileID: 6437092812428542287}
-  isBomb: 1
+  bombSpawner: {fileID: 0}
 --- !u!70 &6437092812428542290
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -136,8 +137,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0013070122, y: -0.01306887}
-  m_Size: {x: 0.34986308, y: 0.21132988}
+  m_Offset: {x: 0.19668788, y: -0.79459697}
+  m_Size: {x: 2.6954663, y: 1.5510982}
   m_Direction: 1
 --- !u!50 &6437092812428542285
 Rigidbody2D:
@@ -160,3 +161,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &6493710510024575318
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6437092812428542280}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.36154523, y: 0.6568037}
+  m_Size: {x: 1.5790102, y: 1.2161646}
+  m_Direction: 1

@@ -48,7 +48,9 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void PlanetDestroyed() {
+    public async void PlanetDestroyed() {
+        audioManager.PlaySound("BGM_Victory");
+        await Task.Delay(14000);
         NextLevel();
     }
 
