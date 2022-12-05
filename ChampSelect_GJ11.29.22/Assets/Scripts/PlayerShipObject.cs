@@ -14,6 +14,7 @@ public class PlayerShipObject : MonoBehaviour
     [SerializeField] GameObject[] HPIcons;
 
     bool dead = false;
+    bool immune = false;
 
     private void Update() {
         if (dead) {
@@ -25,22 +26,24 @@ public class PlayerShipObject : MonoBehaviour
     }
 
     public async void TakeDamage() {
+        if (immune) return;
+        immune = true;
         health--;
         UpdateHealth();
         //AkSoundEngine.PostEvent("Take_Damage_Player", gameObject);
         levelManager.audioManager.PlaySound("FX_Damage_Player");
         if (health < 1) {
-            levelManager.respawning = true;
             dead = true;
             animator.SetTrigger("Death");
             tractorBeam.SetActive(false);
             levelManager.audioManager.PlaySound("BGM_Defeat");
-            await Task.Delay(5000);
+            //await Task.Delay(1000);
             levelManager.RestartLevel();
         } else {
             shipBody.color = new Color(248f / 255f, 90f / 255, 90f / 255);
             await Task.Delay(500);
             shipBody.color = Color.white;
+            immune = false;
         }
     }
 

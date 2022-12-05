@@ -37,6 +37,8 @@ public class ProgressManager : MonoBehaviour
     public static ProgressManager instance;
     //public bool[] levelsStared = new bool[3] {false,false,false};
     public int currentLevel = -1;
+    public float firstPlanetDestoryed = 0f;
+    public float secondPlanetDestoryed = 0f;
     
 
     void Awake() {

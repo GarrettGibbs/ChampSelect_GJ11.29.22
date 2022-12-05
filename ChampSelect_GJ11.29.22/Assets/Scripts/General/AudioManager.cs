@@ -26,6 +26,8 @@ public class AudioManager : MonoBehaviour {
     public static AudioManager instance;
     public MusicType currentMusic = MusicType.Peaceful;
 
+    int musicIndex = 0;
+
     void Awake() {
         if (instance == null) {
             instance = this;
@@ -37,6 +39,8 @@ public class AudioManager : MonoBehaviour {
 
     public async void TransitionMusic(MusicType music) {
         if (music == currentMusic) return;
+        musicIndex++;
+        int tempIndex = musicIndex;
         //ResetAmbients();
         currentMusic = music;
         LeanTween.value(gameObject, .15f, 0f, .2f).setOnUpdate((float val) => {
@@ -45,10 +49,10 @@ public class AudioManager : MonoBehaviour {
         await Task.Delay(205);
         switch (music) {
             case MusicType.Peaceful:
-                PlayPeacefulMusic();
+                PlayPeacefulMusic(tempIndex);
                 break;
             case MusicType.Battle:
-                PlayBattleMusic();
+                PlayBattleMusic(tempIndex);
                 break;
         }
 
@@ -80,24 +84,24 @@ public class AudioManager : MonoBehaviour {
     //    secondary2.Stop();
     //}
 
-    private async void PlayBattleMusic() {
+    private async void PlayBattleMusic(int index) {
         await Task.Delay(200);
         musicSource.clip = combatIntro;
         musicSource.Play();
         musicSource.volume = 1f;
         await Task.Delay(59110);
-        if (currentMusic != MusicType.Battle || !this.enabled) return;
+        if (currentMusic != MusicType.Battle || !this.enabled || index != musicIndex) return;
         musicSource.clip = combatLoop;
         musicSource.Play();
     }
 
-    private async void PlayPeacefulMusic() {
+    private async void PlayPeacefulMusic(int index) {
         await Task.Delay(200);
         musicSource.clip = peacefulIntro;
         musicSource.Play();
         musicSource.volume = 1f;
         await Task.Delay(59077);
-        if (currentMusic != MusicType.Peaceful || !this.enabled) return;
+        if (currentMusic != MusicType.Peaceful || !this.enabled || index != musicIndex) return;
         musicSource.clip = peacefulLoop;
         musicSource.Play();
     }
