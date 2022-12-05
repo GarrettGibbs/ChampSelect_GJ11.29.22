@@ -27,11 +27,15 @@ public class PlayerShipObject : MonoBehaviour
     public async void TakeDamage() {
         health--;
         UpdateHealth();
-        AkSoundEngine.PostEvent("Take_Damage_Player", gameObject);
-        if(health < 1) {
+        //AkSoundEngine.PostEvent("Take_Damage_Player", gameObject);
+        levelManager.audioManager.PlaySound("FX_Damage_Player");
+        if (health < 1) {
+            levelManager.respawning = true;
             dead = true;
             animator.SetTrigger("Death");
             tractorBeam.SetActive(false);
+            levelManager.audioManager.PlaySound("BGM_Defeat");
+            await Task.Delay(5000);
             levelManager.RestartLevel();
         } else {
             shipBody.color = new Color(248f / 255f, 90f / 255, 90f / 255);
@@ -43,7 +47,8 @@ public class PlayerShipObject : MonoBehaviour
     public void GainHealth() {
         health++;
         UpdateHealth();
-        AkSoundEngine.PostEvent("Heal_Player", gameObject);
+        //AkSoundEngine.PostEvent("Heal_Player", gameObject);
+        levelManager.audioManager.PlaySound("FX_Heal_Player");
     }
 
     private void UpdateHealth() {

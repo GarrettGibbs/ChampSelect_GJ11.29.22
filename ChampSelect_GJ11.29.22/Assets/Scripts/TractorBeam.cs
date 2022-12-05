@@ -5,6 +5,7 @@ using UnityEngine;
 public class TractorBeam : MonoBehaviour
 {
     [SerializeField] GameObject holdPosition;
+    [SerializeField] LevelManager levelManager;
 
     private GrabbableObject holding = null;
 
@@ -13,7 +14,8 @@ public class TractorBeam : MonoBehaviour
         if (go != null && holding == null) {
             go.GrabThisObject(holdPosition.transform, this);
             holding = go;
-            AkSoundEngine.PostEvent("TractorBeam_Grab", gameObject);
+            //AkSoundEngine.PostEvent("TractorBeam_Grab", gameObject);
+            levelManager.audioManager.PlaySound("FX_TractorBeam_Grabs");
         }
     }
 

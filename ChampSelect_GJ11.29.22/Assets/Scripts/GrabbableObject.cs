@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GrabbableObject : MonoBehaviour
 {
+    [SerializeField] LevelManager levelManager;
     [SerializeField] EnemyAI enemyAI;
     [SerializeField] Animator animator;
     private Transform holdingPoint = null;
@@ -62,21 +63,27 @@ public class GrabbableObject : MonoBehaviour
         }
         if(enemyAI != null) {
             enemyAI.DestroyEnemy();
-            AkSoundEngine.PostEvent("Ship_Explosion_Enemy", gameObject);
+            //AkSoundEngine.PostEvent("Ship_Explosion_Enemy", gameObject);
+            levelManager.audioManager.PlaySound("FX_Explosion");
         } else {
             if (bombSpawner != null) {
                 bombSpawner.OnBombDestoryed();
                 BombExplosion();
-                AkSoundEngine.PostEvent("Ship_Explosion_Enemy", gameObject);
+                //AkSoundEngine.PostEvent("Ship_Explosion_Enemy", gameObject);
+                levelManager.audioManager.PlaySound("FX_Explosion");
             }
             hit = true;
             animator.SetTrigger("Hit");
-            AkSoundEngine.PostEvent("Destroy_Object", gameObject);
+            //AkSoundEngine.PostEvent("Destroy_Object", gameObject);
+            levelManager.audioManager.PlaySound("FX_Damage2");
         }
     }
 
     private void BombExplosion() {
-        float currentScale = transform.localScale.x;
+        foreach(var collider in gameObject.GetComponents<CapsuleCollider2D>()) {
+            Destroy(collider);
+        }
+        float currentScale = (transform.localScale.x)*9;
         LeanTween.value(gameObject, currentScale, currentScale*2f, .35f).setOnUpdate((float val) => {
             transform.localScale = new Vector3(val, val, val);
         });
