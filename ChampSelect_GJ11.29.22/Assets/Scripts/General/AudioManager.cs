@@ -18,8 +18,8 @@ public class AudioManager : MonoBehaviour {
 
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource sfxSource;
-    [SerializeField] AudioSource secondary1;
-    [SerializeField] AudioSource secondary2;
+    public AudioSource secondary1;
+    public AudioSource secondary2;
     
     [SerializeField] ProgressManager pm;
 
@@ -143,10 +143,24 @@ public class AudioManager : MonoBehaviour {
         StartCoroutine(PlaySFX(a));
     }
 
-    public void ResetAmbients() {
-        secondary1.clip = null;
-        secondary2.clip = null;
+    //public void ResetAmbients() {
+        //secondary1.clip = null;
+        //secondary2.clip = null;
+    //}
+
+    // WW - scripts for playing Player/Enemy engine sound
+    public void PlaySecondarySound(AudioSource source)
+    {
+        source.Play(0);
     }
+
+    public void StopSecondarySound(AudioSource source)
+    {
+        source.Stop();
+    }
+
+   
+        
 
     //public void PlaySound(SoundType soundType) {
     //    switch (soundType) {

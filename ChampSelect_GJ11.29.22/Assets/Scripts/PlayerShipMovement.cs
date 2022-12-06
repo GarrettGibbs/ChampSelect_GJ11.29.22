@@ -29,6 +29,7 @@ public class PlayerShipMovement : MonoBehaviour
         ThrustForward(yAxis);
         ThrustLeftRight(xAxis);
 
+
         if (Input.GetKey(KeyCode.O) || Input.GetMouseButton(0)) {
             Rotate(rotationSpeed);
         } else if (Input.GetKey(KeyCode.P) || Input.GetMouseButton(1)) {
