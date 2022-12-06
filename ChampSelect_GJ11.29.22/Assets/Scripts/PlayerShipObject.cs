@@ -16,9 +16,16 @@ public class PlayerShipObject : MonoBehaviour
     bool dead = false;
     bool immune = false;
 
+    private void Awake()
+    {
+        levelManager.audioManager.PlaySecondarySound(levelManager.audioManager.secondary1);
+
+    }
+
     private void Update() {
         if (dead) {
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerShip_Death") && (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animator.IsInTransition(0))) {
+                levelManager.audioManager.StopSecondarySound(levelManager.audioManager.secondary1);
                 Destroy(gameObject);
             }
             return;

@@ -63,8 +63,12 @@ public class LevelManager : MonoBehaviour
 
         if (activeEnemies.Count == 0) {
             audioManager.TransitionMusic(MusicType.Peaceful);
+            //Somehow this broke the game and my computer - whoops!
+            //audioManager.StopSecondarySound(audioManager.secondary2);
         } else {
             audioManager.TransitionMusic(MusicType.Battle);
+            //Somehow this broke the game and my computer - whoops!
+            //audioManager.PlaySecondarySound(audioManager.secondary2);
         }
     }
 
