@@ -903,7 +903,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85151532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.296, y: 0.012, z: 0}
+  m_LocalPosition: {x: 0.259, y: 0.012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1697,8 +1697,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210445949}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 6, y: 158.6, z: 0}
-  m_LocalScale: {x: 406.49997, y: 418.1, z: 81.299995}
+  m_LocalPosition: {x: 2.2, y: 134.5, z: 0}
+  m_LocalScale: {x: 315.19034, y: 418.1, z: 81.299995}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 85151533}
@@ -4245,7 +4245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.092593074, y: -0.037037037, z: 96}
+  m_LocalPosition: {x: -0.09259319, y: -0.037037037, z: 96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4299,8 +4299,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d06f547e766436abe385e60c853a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4313,16 +4311,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca54957db64904ca287fa7a6900a598d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!114 &519420036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4335,18 +4323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0dbc2ee489bf4260ab107545ee33913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 4fae60215c5934f828654b58b8c29ce6, type: 2}
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  bankNameInternal: 
-  valueGuidInternal: 
 --- !u!81 &519420037
 AudioListener:
   m_ObjectHideFlags: 0
@@ -13472,8 +13448,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 784304971}
   t: {fileID: 784304970}
-  maxVelocity: 2.5
-  rotationSpeed: 0.3
+  maxVelocity: 3
+  rotationSpeed: 0.55
   tractorBeam: {fileID: 210445953}
   levelManager: {fileID: 1353170518}
 --- !u!1 &818191000
@@ -27052,19 +27028,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23cceb3754a834526af9761bf7149883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: c99eb74512bd943e69f7c7ba3e3f5dcb, type: 2}
-  basePath: 
-  language: 
-  defaultPoolSize: 0
-  lowerPoolSize: 0
-  streamingPoolSize: 0
-  memoryCutoffThreshold: 0
-  monitorPoolSize: 0
-  monitorQueuePoolSize: 0
-  callbackManagerBufferSize: 0
-  spatialAudioPoolSize: 0
-  maxSoundPropagationDepth: 0
-  engineLogging: 0
 --- !u!4 &989567735
 Transform:
   m_ObjectHideFlags: 0
