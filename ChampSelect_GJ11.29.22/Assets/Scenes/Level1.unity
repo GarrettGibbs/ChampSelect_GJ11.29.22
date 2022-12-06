@@ -13690,7 +13690,7 @@ MonoBehaviour:
   rb: {fileID: 784304971}
   t: {fileID: 784304970}
   maxVelocity: 2.5
-  rotationSpeed: 0.3
+  rotationSpeed: 0.6
   tractorBeam: {fileID: 210445953}
   levelManager: {fileID: 1353170518}
 --- !u!1 &818191000
