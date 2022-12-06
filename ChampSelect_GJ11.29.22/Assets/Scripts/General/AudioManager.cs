@@ -43,7 +43,7 @@ public class AudioManager : MonoBehaviour {
         int tempIndex = musicIndex;
         //ResetAmbients();
         currentMusic = music;
-        LeanTween.value(gameObject, .15f, 0f, .2f).setOnUpdate((float val) => {
+        LeanTween.value(gameObject, .8f, 0f, .2f).setOnUpdate((float val) => {
             musicSource.volume = val;
         });
         await Task.Delay(205);
@@ -88,7 +88,7 @@ public class AudioManager : MonoBehaviour {
         await Task.Delay(200);
         musicSource.clip = combatIntro;
         musicSource.Play();
-        musicSource.volume = 1f;
+        musicSource.volume = .8f;
         await Task.Delay(59110);
         if (currentMusic != MusicType.Battle || !this.enabled || index != musicIndex) return;
         musicSource.clip = combatLoop;
@@ -99,7 +99,7 @@ public class AudioManager : MonoBehaviour {
         await Task.Delay(200);
         musicSource.clip = peacefulIntro;
         musicSource.Play();
-        musicSource.volume = 1f;
+        musicSource.volume = .8f;
         await Task.Delay(59077);
         if (currentMusic != MusicType.Peaceful || !this.enabled || index != musicIndex) return;
         musicSource.clip = peacefulLoop;
