@@ -4101,7 +4101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Game by \n\nGarrett Gibbs \n\nand \n\nWilliamthewood"
+  m_text: "Game by \n\nGarrett Gibbs \n\nand \n\nWill Wood"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 71d48e01d4270c84bb642950abc4b5ca, type: 2}
   m_sharedMaterial: {fileID: -8597740867180762950, guid: 71d48e01d4270c84bb642950abc4b5ca, type: 2}
