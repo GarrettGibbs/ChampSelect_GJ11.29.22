@@ -6,6 +6,7 @@ public class PlayerShipMovement : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Transform t;
+    [SerializeField] float speed;
     [SerializeField] float maxVelocity;
     [SerializeField] float rotationSpeed;
 
@@ -50,18 +51,18 @@ public class PlayerShipMovement : MonoBehaviour
 
     private void ThrustForward(float amount) {
         //Vector2 force = transform.up * amount;
-        Vector2 force = Vector2.up * amount;
-        rb.AddForce(force);
+        Vector2 force = Vector2.up * speed * amount;
+        rb.AddForce(force * Time.deltaTime);
     }
 
     private void ThrustLeftRight(float amount) {
         //Vector2 force = transform.right * amount;
-        Vector2 force = Vector2.right * amount;
-        rb.AddForce(force);
+        Vector2 force = Vector2.right * speed * amount;
+        rb.AddForce(force * Time.deltaTime);
     }
 
     private void Rotate(float amount) { 
         rb.freezeRotation = false;
-        t.Rotate(0, 0, amount);
+        t.Rotate(0, 0, amount * Time.deltaTime);
     }
 }

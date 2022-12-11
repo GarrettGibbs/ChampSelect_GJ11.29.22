@@ -5781,7 +5781,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.4351845, y: 31.86111, z: 96}
+  m_LocalPosition: {x: 15.435185, y: 31.86111, z: 96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -41717,8 +41717,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 784304971}
   t: {fileID: 784304970}
+  speed: 200
   maxVelocity: 2.5
-  rotationSpeed: 0.6
+  rotationSpeed: 125
   tractorBeam: {fileID: 210445953}
   levelManager: {fileID: 1353170518}
 --- !u!1 &804529468
